@@ -4,7 +4,9 @@ import pandas
 from textwrap import wrap
 from matplotlib.ticker import FuncFormatter
 import locale
-locale.setlocale(locale.LC_ALL, '')
+locale.setlocale(locale.LC_ALL, 'id_ID.UTF8')
+plt.rcParams['pdf.fonttype'] = 42
+plt.style.use('seaborn-paper')
 
 import sys, os, inspect
 currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
@@ -15,8 +17,8 @@ berkasData = currentdir + '\\bab_06_01a_dataKasusTB.csv'
 berkasSimpan = currentdir +'\\bab_06_01a_kasusTB.pdf'
 # judulDiagram = 'Penemuan Kasus TB'
 sumbuX = 'Jumlah'
-sumbuY = 'Puskesmas/ Kabupaten'
-tickerSumbuX = np.arange(0,301,50)
+sumbuY = 'Puskesmas/ RS/ Kabupaten'
+tickerSumbuX = np.arange(0,401,100)
 labelBar1 = 'L'
 labelBar2 = 'P'
 labelBar3 = 'L+P'
@@ -35,8 +37,8 @@ widthDL = 0.5      # spacing for data labels
 
 # make bars
 fig, ax = plt.subplots()
-rects1 = ax.barh(ind, bar1, width, color='royalblue', label = labelBar1)
-rects2 = ax.barh(ind + width, bar2, width, color='#cc0000', label = labelBar2)
+rects1 = ax.barh(ind, bar1, width, color='steelblue', label = labelBar1)
+rects2 = ax.barh(ind + width, bar2, width, color='orangered', label = labelBar2)
 rects3 = ax.barh(ind + 2*width, bar3, width, color='yellowgreen', label = labelBar3)
 
 # add some text for labels, title and axes ticks
@@ -74,7 +76,7 @@ pyrfig.set_figwidth(8)
 pyrfig.set_figheight(5)
 # tight_layout to make consistent size
 # adjust subplot to make room for legend
-fig.subplots_adjust(bottom=-0.15)
+fig.subplots_adjust(bottom=0.15)
 plt.tight_layout()
 plt.savefig(berkasSimpan)
 plt.close(pyrfig)

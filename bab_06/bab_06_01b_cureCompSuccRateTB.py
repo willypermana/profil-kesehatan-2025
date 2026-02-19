@@ -5,6 +5,8 @@ from textwrap import wrap
 from matplotlib.ticker import FuncFormatter
 import locale
 locale.setlocale(locale.LC_ALL, 'id_ID.UTF8')
+plt.rcParams['pdf.fonttype'] = 42
+plt.style.use('seaborn-paper')
 
 import sys, os, inspect
 currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
@@ -15,7 +17,7 @@ berkasData = currentdir +'\\bab_06_01b_dataCureCompSuccRateTB.csv'
 berkasSimpan = currentdir +'\\bab_06_01b_cureCompSuccRateTB.pdf'
 # judulDiagram = 'Cure Rate & Success Rate TB'
 sumbuX = 'Cakupan'
-sumbuY = 'Puskesmas/ Kabupaten'
+sumbuY = 'Puskesmas/ RS/ Kabupaten'
 tickerSumbuX = np.arange(0,110,25)
 labelBar1 = 'Cure Rate'
 labelBar2 = 'Complete Rate'
@@ -35,7 +37,7 @@ widthDL = 0.5      # spacing for data labels
 
 # make bars
 fig, ax = plt.subplots()
-rects1 = ax.barh(ind, bar1, width, color='steelblue', label=labelBar1)
+rects1 = ax.barh(ind, bar1, width, color='steelblue', label = labelBar1)
 rects2 = ax.barh(ind + width, bar2, width, color='orangered', label = labelBar2)
 rects3 = ax.barh(ind + 2*width, bar3, width, color='yellowgreen', label = labelBar3)
 
@@ -74,7 +76,7 @@ pyrfig.set_figwidth(8)
 pyrfig.set_figheight(5)
 # tight_layout to make consistent size
 # adjust subplot to make room for legend
-fig.subplots_adjust(bottom=-0.15)
+fig.subplots_adjust(bottom=0.15) 
 plt.tight_layout()
 plt.savefig(berkasSimpan)
 plt.close(pyrfig)

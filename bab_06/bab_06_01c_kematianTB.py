@@ -5,6 +5,8 @@ from textwrap import wrap
 from matplotlib.ticker import FuncFormatter
 import locale
 locale.setlocale(locale.LC_ALL, 'id_ID.UTF8')
+plt.rcParams['pdf.fonttype'] = 42
+plt.style.use('seaborn-paper')
 
 import sys, os, inspect
 currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
@@ -15,7 +17,7 @@ berkasData = currentdir +'\\bab_06_01c_dataKematianTB.csv'
 berkasSimpan = currentdir +'\\bab_06_01c_kematianTB.pdf'
 # judulDiagram = 'Cakupan Desa SBS\nTahun 2022'
 sumbuX = 'Persentase'
-sumbuY = 'Puskesmas/ Kabupaten'
+sumbuY = 'Puskesmas/ RS/ Kabupaten'
 labelBar1 = 'Kematian selama pengobatan TB'
 tickerSumbuX = np.arange(0,110,25)
 
@@ -64,7 +66,7 @@ pyrfig.set_figwidth(8)
 pyrfig.set_figheight(5)
 # tight_layout to make consistent size
 # adjust subplot to make room for legend
-fig.subplots_adjust(bottom=-0.15)
+fig.subplots_adjust(bottom=0.15)
 plt.tight_layout()
 plt.savefig(berkasSimpan)
 plt.close(pyrfig)
