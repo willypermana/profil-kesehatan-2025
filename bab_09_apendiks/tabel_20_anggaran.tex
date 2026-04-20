@@ -2,61 +2,94 @@
 \addcontentsline{lot}{section}{\protect\numberline{}Tabel 20 - Anggaran Kesehatan}
 \ra{1.3}
 
-
-\begin{tabular}{rY{20em}rr}
-	\multicolumn{4}{l}{Tabel 20}\\
-	\multicolumn{4}{c}{ANGGARAN KESEHATAN}\\
-	\multicolumn{4}{c}{KABUPATEN BELITUNG TIMUR}\\
-	\multicolumn{4}{c}{TAHUN \tP}\\
+\begin{longtable}{rY{25em}rrr}
+%\begin{tabular}{rY{15em}rrr}
+	\multicolumn{5}{l}{Tabel 20}\\
+	\multicolumn{5}{c}{ANGGARAN KESEHATAN KABUPATEN BELITUNG TIMUR TAHUN \tP}\\
+	% prevent longtable show up twice in TOC. set caption for firsthead, then set empty starred
+	% caption for next heads. in longtable \toprule should be prepended by \\
+	\caption*{}
+	\\ \toprule
 	\toprule
-	\multirow{2}{*}{NO} & \multirow{2}{*}{SUMBER BIAYA}                    & \multicolumn{2}{c}{ALOKASI ANGGARAN KESEHATAN} \\
-	     \cmidrule{3-4}
-	                    &                                                  &               Rupiah &                      \% \\
-	     \midrule
-	           \emph{1} & \emph{2}                                         &             \emph{3} &                \emph{4} \\
-	     \midrule
-	                    & ANGGARAN KESEHATAN BERSUMBER:                    &                      &                         \\
-	                  1 & APBD KABUPATEN                                   &   217.419.105.329,00 &                 100,00  \\
-	                    & a. Belanja Pegawai                               &   118.275.551.219,00 &                  54,40  \\
-	                    & b. Belanja Barang dan Jasa                       &    77.537.297.313,00 &                  35,66  \\
-	                    & c. Belanja Modal                                 &     7.590.112.797,00 &                   3,49  \\
-	                    & d. Belanja Lainnya                               &                 0,00 &                   0,00  \\
-	                    & e. Dana Alokasi Khusus (DAK)                     &    14.016.144.000,00 &                   6,45  \\
-	                    & \multicolumn{1}{l}{\quad\emph{ - DAK fisik}}     &     3.045.557.000,00 &                   1,40  \\
-	                    & \multicolumn{1}{l}{\qquad 1. Reguler}            &     3.045.557.000,00 &                   1,40  \\
-	                    & \multicolumn{1}{l}{\qquad 2. Penugasan}          &                 0,00 &                   0,00  \\
-	                    & \multicolumn{1}{l}{\qquad 3. Afirmasi}           &                 0,00 &                   0,00  \\
-	                    & \multicolumn{1}{l}{\quad\emph{ - DAK non fisik}} &    10.970.587.000,00 &                   5,05  \\
-	                    & \multicolumn{1}{l}{\qquad 1. BOK}                &    10.970.587.000,00 &                   5,05  \\
-	                    & \multicolumn{1}{l}{\qquad 2. Akreditasi}         &                 0,00 &                   0,00  \\
-	                    & \multicolumn{1}{l}{\qquad 3. Jampersal}          &                 0,00 &                   0,00  \\
-	                    &                                                  &                      &                         \\
-	                  2 & APBD PROVINSI                                    &                 0,00 &                   0,00  \\
-	                    & a. Belanja Pegawai                               &                 0,00 &                   0,00  \\
-	                    & b. Belanja Barang dan Jasa                       &                 0,00 &                   0,00  \\
-	                    & c. Belanja Modal                                 &                 0,00 &                   0,00  \\
-	                    & d. Belanja Lainnya                               &                 0,00 &                   0,00  \\
-	                    & c. Dana Alokasi Khusus (DAK) : BOK               &                 0,00 &                   0,00  \\
-	                    &                                                  &                      &                         \\
-	                  3 & APBN :                                           &                 0,00 &                   0,00  \\
-	                    & a. Dana Dekonsentrasi                            &                 0,00 &                   0,00  \\
-	                    & b. Kapitasi                                      &                 0,00 &                   0,00  \\
-	                    &                                                  &                      &                         \\
-	                  4 & PINJAMAN/ HIBAH LUAR NEGERI (PHLN)               &                 0,00 &                   0,00  \\
-	                    &                                                  &                      &                         \\
-	                  5 & SUMBER PEMERINTAH LAIN                           &                 0,00 &                   0,00 \\
-	                    &                                                  &                      &                         \\
+	\multirow{2}{*}{NO} & \multirow{2}{*}{SUMBER BIAYA}                    & \multicolumn{1}{X{12em}}{ALOKASI ANGGARAN KESEHATAN} & \multicolumn{2}{c}{REALISASI ANGGARAN KESEHATAN} \\
+	\cmidrule(l{2pt}r{2pt}){3-3}\cmidrule(l{2pt}r{2pt}){4-5}
+	                    &                                                  &                     Rupiah &               Rupiah &                      \% \\
+	\midrule                                                                                       
+	           \emph{1} & \emph{2}                                         &                   \emph{3} &             \emph{4} &                \emph{5} \\
+	\midrule
+	\endfirsthead
+	\caption*{} 
+	\\ \toprule
+	\multirow{2}{*}{NO} & \multirow{2}{*}{SUMBER BIAYA}                    & \multicolumn{1}{X{12em}}{ALOKASI ANGGARAN KESEHATAN} & \multicolumn{2}{c}{REALISASI ANGGARAN KESEHATAN} \\
+	\cmidrule(l{2pt}r{2pt}){3-3}\cmidrule(l{2pt}r{2pt}){4-5}
+	                    &                                                  &                     Rupiah &               Rupiah &                      \% \\
+	\midrule                                                                                       
+	           \emph{1} & \emph{2}                                         &                   \emph{3} &             \emph{4} &                \emph{5} \\
+	\midrule
+	\endhead
+	% make bottom border on when table continue to next page
+	\hline
+	\endfoot
+	\endlastfoot
+	                  A & PENDAPATAN DAERAH                                                	      &                            &                      &                         \\
+                      1 & PENDAPATAN ASLI DAERAH                                                  &                            &   217.419.105.329,00 &                         \\
+                        & a. Pajak Daerah                                                         &                            &   118.275.551.219,00 &                         \\
+                        & b. Retribusi Daerah                                                     &                            &    77.537.297.313,00 &                         \\
+                        & c. Hasil Pengelolaan Kekayaan Daerah yang Dipisahkan                    &                            &     7.590.112.797,00 &                         \\
+                        & d. Lain-Lain PAD yang sah                                               &                            &                 0,00 &                         \\
+                      2 & PENDAPATAN TRANSFER                                                     &                            &   217.419.105.329,00 &                         \\
+                        & a. Pendapatan Transfer Pemerintah Pusat                                 &                            &   118.275.551.219,00 &                         \\
+                        & \multicolumn{1}{l}{\quad 1) Dana Alokasi Umum (DAU) Block Grant}        &                            &   118.275.551.219,00 &                         \\
+                        & \multicolumn{1}{l}{\quad 2) Dana Alokasi Umum (DAU) Spesific Grant}     &                            &   118.275.551.219,00 &                         \\
+                        & \multicolumn{1}{l}{\quad 3) Dana Alokasi Khusus (DAK):}                 &                            &   118.275.551.219,00 &                         \\
+                        & \multicolumn{1}{l}{\qquad a. DAK Fisik}                                 &                            &   118.275.551.219,00 &                         \\
+						& \multicolumn{1}{l}{\qquad b. DAK Non Fisik:}                            &                            &   118.275.551.219,00 &                         \\
+						& \multicolumn{1}{l}{\quad\qquad - BOK Kabupaten}                         &                            &   118.275.551.219,00 &                         \\
+						& \multicolumn{1}{l}{\quad\qquad - BOK Puskesmas}                         &                            &   118.275.551.219,00 &                         \\
+						& \multicolumn{1}{l}{\quad\qquad - DAK Non Fisik BPOM}                    &                            &   118.275.551.219,00 &                         \\
+						& \multicolumn{1}{l}{\quad 4) Dana Bagi Hasil}                            &                            &   118.275.551.219,00 &                         \\
+						& \multicolumn{1}{l}{\quad 5) Pendapatan Bagi Hasil Pajak Rokok}          &                            &   118.275.551.219,00 &                         \\
+						& \multicolumn{1}{l}{\quad 6) Pendapatan Dana Kapitasi JKN}               &                            &   118.275.551.219,00 &                         \\	
+						& \multicolumn{1}{l}{\quad 7) Sumber anggaran lainnya}                    &                            &   118.275.551.219,00 &                         \\
+						& b. Pendapatan Transfer Antar Daerah                                     &                            &   118.275.551.219,00 &                         \\
+                      3 & APBN                                                                    &                            &   217.419.105.329,00 &                         \\
+                        & a. Dana Dekonsentrasi                                                   &                            &                 0,00 &                         \\
+                      4 & LAIN-LAIN PENDAPATAN DAERAH YANG SAH                                    &                            &                 0,00 &                         \\
+                        & a. Pendapatan Hibah Luar Negeri/Pinjaman                                &                            &                 0,00 &                         \\
+                        & b. Dana Darurat                                                         &                            &                 0,00 &                         \\
+                        & c. Lain-Lain Pendapatan sesuai dengan ketentuan UU                      &                            &                 0,00 &                         \\
+                        &                                                                         &                            &                      &                         \\
+	                  B & BELANJA DAERAH                                                          &                            &                      &                         \\
+	                  1 & BELANJA OPERASI                                                         &                            &   217.419.105.329,00 &                 100,00  \\
+	                    & a. Belanja Pegawai                                                      &                            &   118.275.551.219,00 &                  54,40  \\
+	                    & b. Belanja Barang dan Jasa                                              &                            &    77.537.297.313,00 &                  35,66  \\
+	                    & c. Belanja Hibah                                                        &                            &     7.590.112.797,00 &                   3,49  \\
+	                    & d. Belanja Bantuan Sosial                                               &                            &                 0,00 &                   0,00  \\
+	                  2 & BELANJA MODAL                                                           &                            &   217.419.105.329,00 &                 100,00  \\
+	                    & a. Belanja Modal Tanah                                                  &                            &   118.275.551.219,00 &                  54,40  \\
+	                    & b. Belanja Modal Peralatan dan Mesin                                    &                            &    77.537.297.313,00 &                  35,66  \\
+	                    & c. Belanja Modal Gedung dan Bangunan                                    &                            &     7.590.112.797,00 &                   3,49  \\
+	                    & d. Belanja Modal Jalan, Jaringan, dan Irigasi                           &                            &                 0,00 &                   0,00  \\
+	                    & e. Belanja Modal Aset Tetap Lainnya                                     &                            &     7.590.112.797,00 &                   3,49  \\
+	                    & f. Belanja Modal Aset Lainnya                                           &                            &                 0,00 &                   0,00  \\
+	                  3 & BELANJA TIDAK TERDUGA                                                   &                            &                 0,00 &                 100,00  \\
+	                    & a. Belanja tidak terduga                                                &                            &                 0,00 &                  54,40  \\
+	                  4 & BELANJA TRANSFER                                                        &                            &                 0,00 &                 100,00  \\
+	                    & a. Belanja bagi hasil                                                   &                            &                 0,00 &                  54,40  \\
+						& b. Belanja Bantuan Keuangan                                             &                            &                 0,00 &                  54,40  \\
+                        &                                                                         &                            &                      &                         \\
+	                  C & PEMBIAYAAN DAERAH                                                       &                            &                      &                         \\
+                        &                                                                         &                            &                      &                         \\
+	    \midrule                                                                                        
+	                                                 \multicolumn{2}{r}{TOTAL ANGGARAN KESEHATAN} &                            &   217.419.105.329,00 &                         \\
+	                                                     \multicolumn{2}{r}{TOTAL APBD KABUPATEN} &       1.008.054.150.786,00 & 1.008.054.150.786,00 &                         \\
 	    \midrule
-	                          \multicolumn{2}{r}{TOTAL ANGGARAN KESEHATAN} &   217.419.105.329,00 &                         \\
-	                              \multicolumn{2}{r}{TOTAL APBD KABUPATEN} & 1.008.054.150.786,00 &                         \\
+                                \multicolumn{2}{r}{\% ANGGARAN KESEHATAN TERHADAP APBD KABUPATEN} &                            &              21,57\% &                         \\
 	    \midrule
-	                    \multicolumn{2}{r}{\% ANGGARAN KESEHATAN TERHADAP} &                      &                 21,57\% \\
-	                                    \multicolumn{2}{r}{APBD KABUPATEN} &                      &                         \\
-	    \midrule
-	                      \multicolumn{2}{r}{ANGGARAN KESEHATAN PERKAPITA} &         1.629.999,44 &                         \\
+	                                             \multicolumn{2}{r}{ANGGARAN KESEHATAN PERKAPITA} &               1.629.999,44 &                      &                         \\
 	    \bottomrule
-\end{tabular}%
-
+%\end{tabular}%
+\end{longtable}
 
 \vspace{2ex}
 {\small Ket: Termasuk anggaran UPT Puskesmas dan RSUD}
