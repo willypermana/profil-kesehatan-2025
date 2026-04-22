@@ -5,6 +5,15 @@
 \newcommand{\namaKabupaten}{Kabupaten Belitung Timur\ }
 \newcommand{\namaKabupatenKapital}{KABUPATEN BELITUNG TIMUR\ }
 
+% tahun kort kusta (tabel 70)
+\newcommand\cohortPB[1]{%
+	\the\numexpr#1 - 1\relax%
+}
+
+\newcommand\cohortMB[1]{%
+	\the\numexpr#1 - 2\relax%
+}
+
 % some hyphenation exception
 % newer polyglossia package seems break the {hyphenrules} babel option
 % and it's deprecated anyway
