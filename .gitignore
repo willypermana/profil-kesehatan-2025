@@ -1,4 +1,3 @@
-*profil2025.pdf
 *.xlsx
 *.psd
 *.txss
@@ -22,3 +21,4 @@
 *.synctex.gz
 !*.bib
 !*/
+profil2025.pdf
