@@ -15,17 +15,17 @@ berkasData = currentdir +'\\bab_07_02_dataAksesSanitasi.csv'
 berkasSimpan = currentdir +'\\bab_07_02_aksesSanitasi.pdf'
 # judulDiagram = 'Cakupan Akses Sanitasi Layak dan Aman\nTahun 2022'
 sumbuX = 'Cakupan'
-sumbuY = 'Kecamatan\ Kabupaten'
-labelBar1 = 'Sanitasi Layak'
+sumbuY = 'Kecamatan/ Kabupaten'
+labelBar1 = 'Akses Sanitasi'
 labelBar2 = 'Sanitasi Aman'
 tickerSumbuX = np.arange(0,110,25)
 
 # read data file
-colnames = ['kecamatan','sanitasiAman','sanitasiLayak']
+colnames = ['kecamatan','aksesSanitasi','sanitasiAman']
 data = pandas.read_csv(berkasData, names=colnames, sep=';')
 kecamatan = data.kecamatan.tolist()
-bar1 = data.sanitasiAman.tolist()
-bar2 = data.sanitasiLayak.tolist()
+bar1 = data.aksesSanitasi.tolist()
+bar2 = data.sanitasiAman.tolist()
 
 ind = np.arange(len(kecamatan))  # the x locations for the groups
 width = 0.4       # the width of the bars
