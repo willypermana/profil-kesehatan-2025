@@ -19,12 +19,12 @@ judulDiagram = 'Proporsi PBI'
  
 # Data to plot
 labels = '', 'PBI'
-paguDinkes = 217419105329
-paguJKN = 20367694200
+paguDinkes = 155097244324
+paguJKN = 19538272600
 paguDinkesNonJKN = paguDinkes - paguJKN
 sizes = [paguDinkesNonJKN,paguJKN]
 colors = ['lightskyblue', 'lightcoral']
-explode = (0.05, 0.05)  # explode 1st slice
+explode = (0.00, 0.05)  # explode 1st slice
 
 # we only want to display one slice
 # return the desired format with replace instead of lambda
@@ -34,7 +34,7 @@ def my_autopct(pct):
 # plt.pie(sizes, explode=explode, labels=labels, colors=colors,
         # autopct=lambda p : '{:n}%'.format(round(p,2)), shadow=True, textprops=dict(fontsize=12), startangle=80)
 # plt.pie(sizes, explode=explode, labels=labels, colors=colors, autopct=my_autopct, shadow=True, textprops=dict(fontsize=12), startangle=90)
-plt.pie(sizes, explode=explode, labels=labels, autopct=my_autopct, shadow=True, textprops=dict(fontsize=12), startangle=90)
+plt.pie(sizes, explode=explode, labels=labels, autopct=my_autopct, shadow=False, textprops=dict(fontsize=12), startangle=90)
 
 centre_circle = plt.Circle((0,0),0.45,fc='white')
 fig = plt.gcf()
