@@ -27,8 +27,8 @@ porcent = 100.*sliceJumlah/sliceJumlah.sum()
 fig1, ax1 = plt.subplots()
 # explodeTuple = (0.05, 0, 0.1, 0.0, 0.1, 0.3)
 # patches, texts, autotexts = ax1.pie(listPagu, autopct='%.2f%%', pctdistance=0.85, explode=explodeTuple, startangle=80)
-explodeTuple = (0.07, 0.07, 0.02, 0.07, 0.11)
-patches, texts, autotexts = ax1.pie(listJumlah[0:6], autopct='%.2f%%', pctdistance=1.18, explode=explodeTuple, startangle=90, counterclock=False)
+explodeTuple = (0.07, 0.07, 0.02, 0.07, 0.11, 0.02, 0.07)
+patches, texts, autotexts = ax1.pie(listJumlah[0:7], autopct='%.2f%%', pctdistance=1.18, explode=explodeTuple, startangle=90, counterclock=False)
 
 for t in autotexts:
     t.set_size(9)
