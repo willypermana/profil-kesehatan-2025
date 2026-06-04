@@ -18,7 +18,7 @@ berkasData = currentdir +'\\bab_05_02_dataPlotAKI.csv'
 berkasSimpan = currentdir +'\\bab_05_02_plotAKI.pdf'
 sumbuX = 'Tahun'
 sumbuY = 'Puskesmas'
-tickerSumbuY = np.arange(0,210,50)
+tickerSumbuY = np.arange(0,260,50)
 tickerSumbuY2 = np.arange(0,21,5)
 
 # read data file

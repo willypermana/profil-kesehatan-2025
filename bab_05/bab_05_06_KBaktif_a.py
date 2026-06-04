@@ -23,7 +23,7 @@ labelBar4 = 'AKDR'
 tickerSumbuX = np.arange(0,110,25)
 
 # read data file
-colnames = ['kecamatan','Kondom','Suntik','Pil','AKDR','MOP','MOW','Implan','MAL','Aktif']
+colnames = ['kecamatan','Kondom','Suntik','Pil','AKDR','Implan','MOP','MOW','MAL','Aktif']
 data = pandas.read_csv(berkasData, names=colnames, sep=';')
 kecamatan = data.kecamatan.tolist()
 bar1 = data.Kondom.tolist()

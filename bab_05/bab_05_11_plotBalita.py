@@ -20,11 +20,9 @@ sumbuY = 'per 1.000 kelahiran'
 tickerSumbuY = np.arange(0,31,10)
 
 # read data file
-colnames = ['tahun','akabaL', 'akabaP', 'akabaLP']
+colnames = ['tahun','akabaLP']
 data = pandas.read_csv(berkasData, names=colnames, sep=';')
 tahun = data.tahun.tolist()
-dataL = data.akabaL.tolist()
-dataP = data.akabaP.tolist()
 dataLP = data.akabaLP.tolist()
 
 # setting up x locations for the groups and width of the bars
@@ -33,9 +31,7 @@ width = 0.25
 
 # make plots
 fig, ax = plt.subplots()
-garis1 = ax.plot(ind, dataL, marker='.', color='royalblue', label='L')
-garis2 = ax.plot(ind, dataP, marker='.', color='#cc0000', label='P')
-garis3 = ax.plot(ind, dataLP, marker='.', color='yellowgreen', label='L+P')
+garis3 = ax.plot(ind, dataLP, marker='.', color='yellowgreen', label='AKABA')
 
 # add some text for labels, title and axes ticks
 # ax.set_title(judulDiagram)
@@ -56,12 +52,8 @@ ax.set_position([box.x0, box.y0 + box.height * 0.1, box.width, box.height * 0.9]
 ax.legend(fontsize='x-small', loc='upper center', bbox_to_anchor=(0.5, -0.15), fancybox=True, shadow=True, ncol=3)
 
 # make labels for plots
-for i, txt in enumerate(dataL):
-		ax.annotate(locale.format_string("%.2f", txt), xy=(ind[i],dataL[i]+0.3), color='royalblue')
-for i, txt in enumerate(dataP):
-		ax.annotate(locale.format_string("%.2f", txt), xy=(ind[i]-0.1,dataP[i]+0.3), color='#cc0000')
 for i, txt in enumerate(dataLP):
-		ax.annotate(locale.format_string("%.2f", txt), xy=(ind[i]+0.1,dataLP[i]-0.3),  color='darkgreen')
+		ax.annotate(locale.format_string("%.2f", txt), xy=(ind[i]-0.1,dataLP[i]+0.3),  color='darkgreen')
 
 # finishing
 pyrfig = plt.figure(1)

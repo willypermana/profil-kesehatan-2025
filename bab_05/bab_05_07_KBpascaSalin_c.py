@@ -19,7 +19,7 @@ sumbuX = 'Metode KB'
 tickerSumbuY = np.arange(0,110,25)
 
 # read data file
-colnames = ['kecamatan','Kondom','Suntik','Pil','AKDR','MOP','MOW','Implan','MAL','Total Pasca Salin']
+colnames = ['kecamatan','Kondom','Suntik','Pil','AKDR','Implan','MOP','MOW','MAL','Total Pasca Salin']
 data = pandas.read_csv(berkasData, names=colnames, sep=';')
 metode = colnames[1:10]
 # get kabupaten row

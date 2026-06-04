@@ -11,19 +11,19 @@ currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentfram
 parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 
-berkasData = currentdir +'\\bab_05_03_dataK1K4.csv'
-# judulDiagram = 'Kunjungan Ibu Hamil\nTahun 2021'
-berkasSimpan = currentdir +'\\bab_05_03_K1K4.pdf'
+berkasData = currentdir +'\\bab_05_03_dataK1K6.csv'
+# judulDiagram = 'Kunjungan Ibu Hamil\nTahun 2025'
+berkasSimpan = currentdir +'\\bab_05_03_K1K6.pdf'
 sumbuX = 'Cakupan'
 sumbuY = 'Puskesmas/ Kabupaten'
 tickerSumbuX = np.arange(0,110,20)
 
 # read data file
-colnames = ['puskesmas','K1','K4']
+colnames = ['puskesmas','K1','K6']
 data = pandas.read_csv(berkasData, names=colnames, sep=';')
 puskesmas = data.puskesmas.tolist()
 bar1 = data.K1.tolist()
-bar2 = data.K4.tolist()
+bar2 = data.K6.tolist()
 
 ind = np.arange(len(puskesmas))  # the x locations for the groups
 width = 0.35       # the width of the bars
@@ -31,7 +31,7 @@ width = 0.35       # the width of the bars
 # make bars
 fig, ax = plt.subplots()
 rects1 = ax.barh(ind, bar1, width, color='steelblue', label = 'K1')
-rects2 = ax.barh(ind + width, bar2, width, color='orangered', label = 'K4')
+rects2 = ax.barh(ind + width, bar2, width, color='orangered', label = 'K6')
 
 # add some text for labels, title and axes ticks
 # ax.set_title(judulDiagram)

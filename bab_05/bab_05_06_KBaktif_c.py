@@ -19,11 +19,11 @@ sumbuX = 'Metode KB'
 tickerSumbuY = np.arange(0,110,25)
 
 # read data file
-colnames = ['kecamatan','Kondom','Suntik','Pil','AKDR','MOP','MOW','Implan','MAL','Total KB Aktif']
+colnames = ['kecamatan','Kondom','Suntik','Pil','AKDR','Implan','MOP','MOW','MAL','Total KB Aktif']
 data = pandas.read_csv(berkasData, names=colnames, sep=';')
 metode = colnames[1:10]
 # get kabupaten row
-cakupan = data.iloc[7].tolist()
+cakupan = data.iloc[7].tolist() # get kabupaten row
 bar1 = cakupan[1:10]
 
 ind = np.arange(len(metode[0:9]))  # the x locations for the groups

@@ -19,12 +19,12 @@ sumbuY = 'Puskesmas/ Kabupaten'
 tickerSumbuX = np.arange(0,110,25)
 
 # read data file
-colnames = ['kecamatan','Kondom','Suntik','Pil','AKDR','MOP','MOW','Implan','MAL','Aktif']
+colnames = ['kecamatan','Kondom','Suntik','Pil','AKDR','Implan','MOP','MOW','MAL','Aktif']
 data = pandas.read_csv(berkasData, names=colnames, sep=';')
 kecamatan = data.kecamatan.tolist()
-bar1 = data.MOP.tolist()
-bar2 = data.MOW.tolist()
-bar3 = data.Implan.tolist()
+bar1 = data.Implan.tolist()
+bar2 = data.MOP.tolist()
+bar3 = data.MOW.tolist()
 bar4 = data.MAL.tolist()
 bar5 = data.Aktif.tolist()
 
@@ -34,9 +34,9 @@ widthDL = 2
 
 # make bars
 fig, ax = plt.subplots()
-rects1 = ax.barh(ind, bar1, width, color='steelblue', label='MOP')
-rects2 = ax.barh(ind + width, bar2, width, color='orangered', label = 'MOW')
-rects3 = ax.barh(ind + 2*width, bar3, width, color='green', label = 'Implan')
+rects1 = ax.barh(ind, bar1, width, color='steelblue', label='Implan')
+rects2 = ax.barh(ind + width, bar2, width, color='orangered', label = 'MOP')
+rects3 = ax.barh(ind + 2*width, bar3, width, color='green', label = 'MOW')
 rects4 = ax.barh(ind + 3*width, bar4, width, color='violet', label = 'MAL')
 rects5 = ax.barh(ind + 4*width, bar5, width, color='darkorange', label = 'Total KB Pasca Salin')
 

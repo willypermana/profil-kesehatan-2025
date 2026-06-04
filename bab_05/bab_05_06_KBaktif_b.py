@@ -16,20 +16,20 @@ berkasSimpan = currentdir +'\\bab_05_06_KBaktif_b.pdf'
 # judulDiagram = 'Cakupan Peserta KB aktif (2)\nTahun 2021'
 sumbuX = 'Cakupan'
 sumbuY = 'Puskesmas/ Kabupaten'
-labelBar1 = 'MOP'
-labelBar2 = 'MOW'
-labelBar3 = 'Implan'
+labelBar1 = 'Implan'
+labelBar2 = 'MOP'
+labelBar3 = 'MOW'
 labelBar4 = 'MAL'
 labelBar5 = 'Total KB Aktif'
 tickerSumbuX = np.arange(0,110,25)
 
 # read data file
-colnames = ['kecamatan','Kondom','Suntik','Pil','AKDR','MOP','MOW','Implan','MAL','Aktif']
+colnames = ['kecamatan','Kondom','Suntik','Pil','AKDR','Implan','MOP','MOW','MAL','Aktif']
 data = pandas.read_csv(berkasData, names=colnames, sep=';')
 kecamatan = data.kecamatan.tolist()
-bar1 = data.MOP.tolist()
-bar2 = data.MOW.tolist()
-bar3 = data.Implan.tolist()
+bar1 = data.Implan.tolist()
+bar2 = data.MOP.tolist()
+bar3 = data.MOW.tolist()
 bar4 = data.MAL.tolist()
 bar5 = data.Aktif.tolist()
 
