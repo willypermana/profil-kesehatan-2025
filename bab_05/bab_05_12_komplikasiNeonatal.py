@@ -15,7 +15,7 @@ sys.path.insert(0, parentdir)
 berkasData = currentdir +'\\bab_05_12_dataKomplikasiNeonatal.csv'
 berkasSimpan = currentdir +'\\bab_05_12_komplikasiNeonatal.pdf'
 # judulDiagram = 'Penanganan Komplikasi Neonatal\nTahun 2021'
-sumbuX = 'Cakupan'
+sumbuX = 'Persentase kasus'
 sumbuY = 'Puskesmas/ Kabupaten'
 tickerSumbuX = np.arange(0,126,25)
 

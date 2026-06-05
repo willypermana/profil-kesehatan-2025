@@ -15,7 +15,7 @@ sys.path.insert(0, parentdir)
 berkasData = currentdir +'\\bab_05_13a_dataPrematur.csv'
 berkasSimpan = currentdir +'\\bab_05_13a_Prematur.pdf'
 # judulDiagram = 'Sebaran BBLR\nTahun 2021'
-sumbuX = 'Cakupan'
+sumbuX = 'Persentase'
 sumbuY = 'Puskesmas/ Kabupaten'
 tickerSumbuX = np.arange(0,110,25)
 
