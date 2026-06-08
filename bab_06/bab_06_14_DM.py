@@ -17,7 +17,7 @@ berkasSimpan = currentdir +'\\bab_06_14_DM.pdf'
 sumbuX = 'Cakupan'
 sumbuY = 'Puskesmas/ Kabupaten'
 tickerSumbuX = np.arange(0,110,25)
-labelBar1 = 'Kasus DM'
+labelBar1 = 'DM Terkendali'
 
 # read data file
 colnames = ['puskesmas','DM']

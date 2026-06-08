@@ -16,28 +16,22 @@ berkasSimpan = currentdir +'\\bab_05_30_skriningLansia.pdf'
 # judulDiagram = 'Pelayanan Kesehatan Usia Lanjut\nTahun 2021'
 sumbuX = 'Cakupan Skrining Lansia'
 sumbuY = 'Puskesmas/ Kabupaten'
-labelBar1 = 'L'
-labelBar2 = 'P'
-labelBar3 = 'L+P'
+labelBar1 = 'Skrining Lansia'
 tickerSumbuX = np.arange(0,126,25)
 
 # read data file
-colnames = ['puskesmas','L','P','LP']
+colnames = ['puskesmas','skriningLansia']
 data = pandas.read_csv(berkasData, names=colnames, sep=';')
 puskesmas = data.puskesmas.tolist()
-bar1 = data.L.tolist()
-bar2 = data.P.tolist()
-bar3 = data.LP.tolist()
+bar1 = data.skriningLansia.tolist()
 
 ind = np.arange(len(puskesmas))  # the x locations for the groups
-width = 0.3       # the width of the bars
+width = 0.5       # the width of the bars
 widthDL = 0.5      # spacing for data labels
 
 # make bars
 fig, ax = plt.subplots()
 rects1 = ax.barh(ind, bar1, width, color='steelblue', label=labelBar1)
-rects2 = ax.barh(ind + width, bar2, width, color='orangered', label = labelBar2)
-rects3 = ax.barh(ind + 2*width, bar3, width, color='yellowgreen', label = labelBar3)
 
 # add some text for labels, title and axes ticks
 # ax.set_title(judulDiagram)
@@ -45,7 +39,7 @@ ax.set_xticks(tickerSumbuX)
 ax.set_xlabel(sumbuX)
 ax.xaxis.set_major_formatter(FuncFormatter(lambda x, pos: "{:n}%".format(x)))
 
-ax.set_yticks(ind+width)
+ax.set_yticks(ind)
 ax.set_yticklabels(list([ '\n'.join(wrap(l, 10)) for l in puskesmas ]))
 ax.invert_yaxis()
 ax.set_ylabel(sumbuY)
@@ -62,10 +56,6 @@ ax.legend(fontsize='x-small', loc='upper center', bbox_to_anchor=(0.5, -0.15), f
 # add data label
 for i, v in enumerate(bar1):
     ax.text(v + widthDL, i, locale.format_string("%.2f", v), ha='left', va='center', fontsize='x-small')
-for i, v in enumerate(bar2):
-    ax.text(v + widthDL, i + width, locale.format_string("%.2f", v), ha='left', va='center', fontsize='x-small')
-for i, v in enumerate(bar3):
-    ax.text(v + widthDL, i + 2*width, locale.format_string("%.2f", v), ha='left', va='center', fontsize='x-small')
 
 # finishing
 pyrfig = plt.figure(1)
