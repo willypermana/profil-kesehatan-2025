@@ -17,7 +17,7 @@ berkasSimpan = currentdir +'\\bab_06_00_penyakitTerbanyak.pdf'
 sumbuX = 'Jumlah Kasus'
 sumbuY = 'Penyakit'
 labelBar1 = 'Penyakit terbanyak'
-tickerSumbuX = np.arange(0,16100,2000)
+tickerSumbuX = np.arange(0,21000,5000)
 
 colnames = ['penyakit','jumlahKasus']
 data = pandas.read_csv(berkasData, names=colnames, delimiter=';')
