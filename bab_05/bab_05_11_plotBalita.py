@@ -31,7 +31,7 @@ width = 0.25
 
 # make plots
 fig, ax = plt.subplots()
-garis3 = ax.plot(ind, dataLP, marker='.', color='yellowgreen', label='AKABA')
+garis3 = ax.plot(ind, dataLP, marker='.', color='yellowgreen', label='AKBA')
 
 # add some text for labels, title and axes ticks
 # ax.set_title(judulDiagram)

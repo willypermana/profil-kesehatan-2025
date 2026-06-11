@@ -35,7 +35,7 @@ width = 0.25
 fig, ax = plt.subplots()
 garis1 = ax.plot(ind, dataL, marker='.', color='royalblue', label='AKN')
 garis2 = ax.plot(ind, dataP, marker='.', color='#cc0000', label='AKB')
-garis3 = ax.plot(ind, dataLP, marker='.', color='yellowgreen', label='AKABA')
+garis3 = ax.plot(ind, dataLP, marker='.', color='yellowgreen', label='AKBA')
 
 # add some text for labels, title and axes ticks
 # ax.set_title(judulDiagram)
