@@ -12,8 +12,6 @@
 !*.png
 !*.pdf
 !*.py
-!preamble_fotoKadin.jpg
-!./bab_00_preamble-front/preamble_fotoKadin_dianita
 *.bbl
 *.blg
 *.run.xml
